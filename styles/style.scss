@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+body {
+  background-image: url(/assets/home.png);
+  margin: 0;
+  padding: 0;
+  .container {
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px auto 0;
+      img {
+        width: 300px;
+        border:5px solid rgba(0, 0, 0, 0);
+        transition: .1s;
+      }
+      img:hover {
+        border:5px solid #000000;
+      }
+      img:active {
+        border:5px solid #c40000;
+      }
+    }
+  }
+  .level {
+    visibility: hidden;
+    opacity: 0;
+    margin: 30px auto ;
+    text-align: center;
+    transition-duration: .4s;
+    span {
+      font-family: 'Aboreto', cursive;
+      font-weight: bold;
+      font-size: 32px;
+      color: #c40000;
+    }
+    ul {
+      margin: 20px 0 0 0;
+      padding: 0;
+      li {
+        font-family: 'Aboreto', cursive;
+        list-style-type: none;
+        color: #282828;
+        font-size: 24px;
+        font-weight: bold;
+        width: 300px;
+        background-color: #c40000;
+        margin: 0 auto 15px;
+        border-radius: 30px;
+        transition: .25s;
+        border: 1px solid #c40000;
+      }
+      li:hover{
+        color: #000000;
+        border: 1px solid #9f9f9f;
+      }
+    }
+  }
+  .shuffle {
+    font-family: 'Aboreto', cursive;
+    visibility: hidden;
+    opacity: 0;
+    color: #282828;
+    font-size: 32px;
+    font-weight: bold;
+    width: 400px;
+    height: 45px;
+    background-color: #c40000;
+    margin: -100px auto 0;
+    border-radius: 30px;
+    transition: .25s;
+    border: 1px solid #c40000;
+    text-align: center;
+    transition-duration: .4s;
+
+  }
+  .shuffle:hover{
+      color: #000000;
+      border: 1px solid #9f9f9f;
+  }
+  .current-state{
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -200px;
+    margin-left: 480px;
+    transition-duration: .4s;
+    .stage-container{
+      width: 250px;
+      text-align: center;
+      .stage-text{
+        font-family: 'Aboreto', cursive;
+        color: #ad0101;
+        font-size: 22px;
+      }
+      .dots-container{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        .green-dots{
+          width: 50px;
+          height: 50px;
+          background-color: #007700;
+          border-radius: 50px;
+        }
+        .brown-dots{
+          width: 50px;
+          height: 50px;
+          background-color: #702222;
+          border-radius: 50px;
+        }
+        .blue-dots{
+          width: 50px;
+          height: 50px;
+          background-color: #0101b6;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  .cardBack{
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -295px;
+    margin-left: 1250px;
+    transition-duration: .4s;
+    img{
+      width: 200px;
+    }
+  }
+}
+
