@@ -77,56 +77,59 @@ body {
       color: #000000;
       border: 1px solid #9f9f9f;
   }
-  .current-state{
+  .container-game{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -200px;
     visibility: hidden;
     opacity: 0;
-    margin-top: -200px;
-    margin-left: 480px;
     transition-duration: .4s;
-    .stage-container{
-      width: 250px;
-      text-align: center;
-      .stage-text{
-        font-family: 'Aboreto', cursive;
-        color: #ad0101;
-        font-size: 22px;
-      }
-      .dots-container{
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        .green-dots{
-          width: 50px;
-          height: 50px;
-          background-color: #007700;
-          border-radius: 50px;
+    .current-state{
+      .stage-container{
+        width: 250px;
+        text-align: center;
+        .stage-text{
+          font-family: 'Aboreto', cursive;
+          color: #ad0101;
+          font-size: 22px;
         }
-        .brown-dots{
-          width: 50px;
-          height: 50px;
-          background-color: #702222;
-          border-radius: 50px;
-        }
-        .blue-dots{
-          width: 50px;
-          height: 50px;
-          background-color: #0101b6;
-          border-radius: 50px;
+        .dots-container{
+          display: flex;
+          flex-direction: row;
+          gap: 50px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          .green-dots{
+            width: 50px;
+            height: 50px;
+            background-color: #007700;
+            border-radius: 50px;
+          }
+          .brown-dots{
+            width: 50px;
+            height: 50px;
+            background-color: #702222;
+            border-radius: 50px;
+          }
+          .blue-dots{
+            width: 50px;
+            height: 50px;
+            background-color: #0101b6;
+            border-radius: 50px;
+          }
         }
       }
     }
-  }
-  .cardBack{
-    visibility: hidden;
-    opacity: 0;
-    margin-top: -295px;
-    margin-left: 1250px;
-    transition-duration: .4s;
-    img{
+    .cards{
       width: 200px;
     }
+    .cardBack{
+      img{
+        width: 200px;
+      }
+    }
   }
+
 }
 
