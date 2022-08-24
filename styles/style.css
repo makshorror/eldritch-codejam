@@ -130,6 +130,9 @@ body .container-game .current-state .stage-container .dots-container .blue-dots 
 body .container-game .cards {
   width: 200px;
 }
+body .container-game .cards img {
+  width: 200px;
+}
 body .container-game .cardBack img {
   width: 200px;
 }
