@@ -8,6 +8,7 @@ let brownDots = document.querySelectorAll(".brown-dots")
 let blueDots = document.querySelectorAll(".blue-dots")
 const backCard = document.querySelector(".cardBack")
 let text = document.querySelectorAll(".stage-text")
+let cards = document.querySelector(".cards")
 
 
 
@@ -747,6 +748,11 @@ ancient.forEach(function (img) {
         levelBlock.style.opacity = "100%"
         stageContainer.style.visibility = "hidden"
         stageContainer.style.opacity = "0"
+        text[0].style.color = "#ad0101"
+        text[1].style.color = "#ad0101"
+        text[2].style.color = "#ad0101"
+        cards.style.visibility = "hidden"
+
     })
 })
 level.forEach(function (li) {
@@ -837,6 +843,7 @@ backCard.addEventListener("click", ()=>{
 
 
 function randomMediumCard() {
+    cards.style.visibility = "visible"
     fullCards.sort(() => Math.random() - 1);
     let randomCard = fullCards[Math.floor(Math.random() * fullCards.length)];
     if(properties.ancient === 0){
