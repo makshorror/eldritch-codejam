@@ -837,7 +837,6 @@ backCard.addEventListener("click", ()=>{
 
 
 function randomMediumCard() {
-
     fullCards.sort(() => Math.random() - 1);
     let randomCard = fullCards[Math.floor(Math.random() * fullCards.length)];
     if(properties.ancient === 0){
