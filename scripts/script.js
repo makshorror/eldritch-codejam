@@ -7,7 +7,7 @@ let greenDots = document.querySelectorAll(".green-dots")
 let brownDots = document.querySelectorAll(".brown-dots")
 let blueDots = document.querySelectorAll(".blue-dots")
 const backCard = document.querySelector(".cardBack")
-
+let text = document.querySelectorAll(".stage-text")
 
 
 
@@ -31,9 +31,10 @@ let ancientAzathoth = {
     }
 }
 
-let maxGreenAzathoth = ancientAzathoth.firstState.green + ancientAzathoth.secondState.green + ancientAzathoth.thirdState.green
-let maxBrownAzathoth = ancientAzathoth.firstState.brown + ancientAzathoth.secondState.brown + ancientAzathoth.thirdState.brown
-let maxBlueAzathoth = ancientAzathoth.firstState.blue + ancientAzathoth.secondState.blue + ancientAzathoth.thirdState.blue
+let maxFirstAzathoth = ancientAzathoth.firstState.green + ancientAzathoth.firstState.brown + ancientAzathoth.firstState.blue
+let maxSecondAzathoth = ancientAzathoth.secondState.brown + ancientAzathoth.secondState.green + ancientAzathoth.secondState.blue
+let maxThirdAzathoth = ancientAzathoth.thirdState.blue + ancientAzathoth.thirdState.green + ancientAzathoth.thirdState.brown
+
 
 let ancientCthulthu = {
     firstState: {
@@ -53,9 +54,9 @@ let ancientCthulthu = {
     }
 }
 
-let maxGreenCthulthu = ancientCthulthu.firstState.green + ancientCthulthu.secondState.green + ancientCthulthu.thirdState.green
-let maxBrownCthulthu = ancientCthulthu.firstState.brown + ancientCthulthu.secondState.brown + ancientCthulthu.thirdState.brown
-let maxBlueCthulthu = ancientCthulthu.firstState.blue + ancientCthulthu.secondState.blue + ancientCthulthu.thirdState.blue
+let maxFirstCthulthu = ancientCthulthu.firstState.green + ancientCthulthu.firstState.brown + ancientCthulthu.firstState.blue
+let maxSecondCthulthu = ancientCthulthu.secondState.brown + ancientCthulthu.secondState.blue + ancientCthulthu.secondState.green
+let maxThirdCthulthu = ancientCthulthu.thirdState.blue + ancientCthulthu.thirdState.brown + ancientCthulthu.thirdState.green
 
 let ancientIogSothoth = {
     firstState: {
@@ -824,13 +825,258 @@ function shuffleCard(){
 
 
 //////////////////////////////////////////////////////
+let parent = document.querySelector(".cards");
+let openCard = document.createElement('IMG')
 
 
-backCard.addEventListener("click", randomCard)
+backCard.addEventListener("click", ()=>{
+    if(properties.level === 2) {
+        randomMediumCard()
+    }
+})
 
 
-function randomCard() {
+function randomMediumCard() {
+
     fullCards.sort(() => Math.random() - 1);
-    let randomCard = fullCards[Math.floor(Math.random() * greenCards.length)];
-    console.log(randomCard)
+    let randomCard = fullCards[Math.floor(Math.random() * fullCards.length)];
+    if(properties.ancient === 0){
+        if(maxFirstAzathoth > 0) {
+            if (randomCard.color === 'blue') {
+                if (ancientAzathoth.firstState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.firstState.blue -= 1
+                    blueDots[0].innerHTML = ancientAzathoth.firstState.blue
+                    maxFirstAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientAzathoth.firstState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.firstState.green -= 1
+                    greenDots[0].innerHTML = ancientAzathoth.firstState.green
+                    maxFirstAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientAzathoth.firstState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.firstState.brown -= 1
+                    brownDots[0].innerHTML = ancientAzathoth.firstState.brown
+                    maxFirstAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        else if(maxSecondAzathoth > 0){
+
+            if (randomCard.color === 'blue') {
+                if (ancientAzathoth.secondState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.secondState.blue -= 1
+                    blueDots[1].innerHTML = ancientAzathoth.secondState.blue
+                    maxSecondAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientAzathoth.secondState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.secondState.green -= 1
+                    greenDots[1].innerHTML = ancientAzathoth.secondState.green
+                    maxSecondAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientAzathoth.secondState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.secondState.brown -= 1
+                    brownDots[1].innerHTML = ancientAzathoth.secondState.brown
+                    maxSecondAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        else if(maxThirdAzathoth > 0){
+
+            if (randomCard.color === 'blue') {
+                if (ancientAzathoth.thirdState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.thirdState.blue -= 1
+                    blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
+                    maxThirdAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientAzathoth.thirdState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.thirdState.green -= 1
+                    greenDots[2].innerHTML = ancientAzathoth.thirdState.green
+                    maxThirdAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientAzathoth.thirdState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientAzathoth.thirdState.brown -= 1
+                    brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
+                    maxThirdAzathoth -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        if(maxFirstAzathoth === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondAzathoth === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdAzathoth === 0) {
+            text[2].style.color ="black"
+        }
+    }
+    else if(properties.ancient === 1){
+        if(maxFirstCthulthu > 0) {
+            if (randomCard.color === 'blue') {
+                if (ancientCthulthu.firstState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.firstState.blue -= 1
+                    blueDots[0].innerHTML = ancientCthulthu.firstState.blue
+                    maxFirstCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientCthulthu.firstState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.firstState.green -= 1
+                    greenDots[0].innerHTML = ancientCthulthu.firstState.green
+                    maxFirstCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientCthulthu.firstState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.firstState.brown -= 1
+                    brownDots[0].innerHTML = ancientCthulthu.firstState.brown
+                    maxFirstCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        else if(maxSecondCthulthu > 0){
+
+            if (randomCard.color === 'blue') {
+                if (ancientCthulthu.secondState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.secondState.blue -= 1
+                    blueDots[1].innerHTML = ancientCthulthu.secondState.blue
+                    maxSecondCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientCthulthu.secondState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.secondState.green -= 1
+                    greenDots[1].innerHTML = ancientCthulthu.secondState.green
+                    maxSecondCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientCthulthu.secondState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.secondState.brown -= 1
+                    brownDots[1].innerHTML = ancientCthulthu.secondState.brown
+                    maxSecondCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        else if(maxThirdCthulthu > 0){
+
+            if (randomCard.color === 'blue') {
+                if (ancientCthulthu.thirdState.blue > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.thirdState.blue -= 1
+                    blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
+                    maxThirdCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+
+            } else if (randomCard.color === 'green') {
+                if (ancientCthulthu.thirdState.green > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.thirdState.green -= 1
+                    greenDots[2].innerHTML = ancientCthulthu.thirdState.green
+                    maxThirdCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            } else if (randomCard.color === 'brown') {
+                if (ancientCthulthu.thirdState.brown > 0) {
+                    openCard.src = randomCard.src
+                    parent.appendChild(openCard)
+                    ancientCthulthu.thirdState.brown -= 1
+                    brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
+                    maxThirdCthulthu -= 1
+                }else{
+                    randomMediumCard()
+                }
+            }
+        }
+
+        if(maxFirstCthulthu === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondCthulthu === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdCthulthu === 0) {
+            text[2].style.color ="black"
+        }
+    }
+
+
+
 }
