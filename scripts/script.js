@@ -831,6 +831,6 @@ backCard.addEventListener("click", randomCard)
 
 function randomCard() {
     fullCards.sort(() => Math.random() - 1);
-    let random = fullCards[Math.floor(Math.random() * greenCards.length)];
-    console.log(random)
+    let randomCard = fullCards[Math.floor(Math.random() * greenCards.length)];
+    console.log(randomCard)
 }
