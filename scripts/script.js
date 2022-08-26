@@ -9,7 +9,7 @@ let blueDots = document.querySelectorAll(".blue-dots")
 const backCard = document.querySelector(".cardBack")
 let text = document.querySelectorAll(".stage-text")
 let cards = document.querySelector(".cards")
-
+let exitCard = []
 
 
 
@@ -984,6 +984,10 @@ function randomLowCard()  {
     cards.style.visibility = "visible"
     easyCards.sort(() => Math.random() - 1);
     let randomCard = easyCards[Math.floor(Math.random() * easyCards.length)];
+    let myIndex = easyCards.indexOf(randomCard)
+    if (myIndex !== -1) {
+        easyCards.splice(myIndex, 1)
+    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
@@ -1472,6 +1476,10 @@ function randomMediumCard() {
     cards.style.visibility = "visible"
     fullCards.sort(() => Math.random() - 1);
     let randomCard = fullCards[Math.floor(Math.random() * fullCards.length)];
+    let myIndex = fullCards.indexOf(randomCard)
+    if (myIndex !== -1) {
+        fullCards.splice(myIndex, 1)
+    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
@@ -1960,6 +1968,10 @@ function randomHardCard()  {
     cards.style.visibility = "visible"
     hardCards.sort(() => Math.random() - 1);
     let randomCard = hardCards[Math.floor(Math.random() * hardCards.length)];
+    let myIndex = hardCards.indexOf(randomCard)
+    if (myIndex !== -1) {
+        hardCards.splice(myIndex, 1)
+    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
