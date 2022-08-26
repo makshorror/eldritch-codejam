@@ -9,7 +9,8 @@ let blueDots = document.querySelectorAll(".blue-dots")
 const backCard = document.querySelector(".cardBack")
 let text = document.querySelectorAll(".stage-text")
 let cards = document.querySelector(".cards")
-
+const reload = document.querySelector('.rel')
+const reloadBtn = document.querySelector('.reload')
 
 
 //Ancient Properties///////////////////////////////////
@@ -879,13 +880,6 @@ ancient.forEach(function (img) {
         properties.ancient = this.id.replace(/id/ig, '') - 1;
         levelBlock.style.visibility = "visible"
         levelBlock.style.opacity = "100%"
-        stageContainer.style.visibility = "hidden"
-        stageContainer.style.opacity = "0"
-        text[0].style.color = "#ad0101"
-        text[1].style.color = "#ad0101"
-        text[2].style.color = "#ad0101"
-        cards.style.visibility = "hidden"
-
     })
 })
 level.forEach(function (li) {
@@ -960,10 +954,10 @@ function shuffleCard(){
         blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
     }
 }
-
-
-
 //////////////////////////////////////////////////////
+
+
+//Open Card///////////////////////////////////////////
 let parent = document.querySelector(".cards");
 let openCard = document.createElement('IMG')
 
@@ -1135,6 +1129,9 @@ function randomLowCard()  {
         }
         if(maxThirdAzathoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -1291,6 +1288,9 @@ function randomLowCard()  {
         }
         if(maxThirdCthulthu === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -1447,6 +1447,9 @@ function randomLowCard()  {
         }
         if(maxThirdIogSothoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -1603,10 +1606,11 @@ function randomLowCard()  {
         }
         if(maxThirdShubNiggurath === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
-
-
 
 }
 
@@ -1766,6 +1770,9 @@ function randomMediumCard() {
         }
         if(maxThirdAzathoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -1922,6 +1929,9 @@ function randomMediumCard() {
         }
         if(maxThirdCthulthu === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2078,6 +2088,9 @@ function randomMediumCard() {
         }
         if(maxThirdIogSothoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2234,6 +2247,9 @@ function randomMediumCard() {
         }
         if(maxThirdShubNiggurath === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2398,6 +2414,9 @@ function randomHardCard()  {
         }
         if(maxThirdAzathoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2554,6 +2573,9 @@ function randomHardCard()  {
         }
         if(maxThirdCthulthu === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2710,6 +2732,9 @@ function randomHardCard()  {
         }
         if(maxThirdIogSothoth === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
@@ -2866,9 +2891,18 @@ function randomHardCard()  {
         }
         if(maxThirdShubNiggurath === 0) {
             text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
         }
     }
 
-
-
 }
+
+
+//////////////////////////////////////////////////////
+
+//Reload//////////////////////////////////////////////
+reloadBtn.addEventListener("click", () => {
+    location.reload();
+})

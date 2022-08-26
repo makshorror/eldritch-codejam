@@ -84,6 +84,29 @@ body {
     visibility: hidden;
     opacity: 0;
     transition-duration: .4s;
+    .rel {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: .2s;
+      .reload {
+        font-family: 'Aboreto', cursive;
+        font-size: 16px;
+        font-weight: bold;
+        background: rgb(99,0,0);
+        background: linear-gradient(90deg, rgba(99,0,0,1) 0%, rgba(156,1,1,1) 50%, rgba(85,0,0,1) 100%);
+        border: 2px solid #c40000;
+        border-radius: 30px;
+        width: 200px;
+        height: 40px;
+        color: rgb(197, 197, 197);
+        transition-duration: .2s;
+      }
+      .reload:hover{
+        border: 2px solid #cdeaff;
+        color: #cdeaff;
+      }
+    }
     .current-state{
       .stage-container{
         width: 250px;

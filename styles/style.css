@@ -84,6 +84,29 @@ body .container-game {
   opacity: 0;
   transition-duration: 0.4s;
 }
+body .container-game .rel {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+body .container-game .rel .reload {
+  font-family: "Aboreto", cursive;
+  font-size: 16px;
+  font-weight: bold;
+  background: rgb(99, 0, 0);
+  background: linear-gradient(90deg, rgb(99, 0, 0) 0%, rgb(156, 1, 1) 50%, rgb(85, 0, 0) 100%);
+  border: 2px solid #c40000;
+  border-radius: 30px;
+  width: 200px;
+  height: 40px;
+  color: rgb(197, 197, 197);
+  transition-duration: 0.2s;
+}
+body .container-game .rel .reload:hover {
+  border: 2px solid #cdeaff;
+  color: #cdeaff;
+}
 body .container-game .current-state .stage-container {
   width: 250px;
   text-align: center;
