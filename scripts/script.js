@@ -14,6 +14,7 @@ const reloadBtn = document.querySelector('.reload')
 
 
 
+
 //Ancient Properties///////////////////////////////////
 let ancientAzathoth = {
     firstState: {
