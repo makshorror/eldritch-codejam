@@ -105,7 +105,8 @@ let maxThirdShubNiggurath = ancientShubNiggurath.thirdState.blue + ancientShubNi
 
 let properties = {
     ancient: 0,
-    level: 0
+    level: 0,
+    count: 0
 }
 //////////////////////////////////////////////////////
 
@@ -880,8 +881,15 @@ ancient.forEach(function (img) {
         properties.ancient = this.id.replace(/id/ig, '') - 1;
         levelBlock.style.visibility = "visible"
         levelBlock.style.opacity = "100%"
+        properties.count += 1
+        if (properties.count > 1) {
+            location.reload()
+        }
     })
 })
+
+
+
 level.forEach(function (li) {
     li.addEventListener("click", function (){
         properties.level = this.id.replace(/level/ig, '') - 1;
