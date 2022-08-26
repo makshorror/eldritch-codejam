@@ -9,7 +9,6 @@ let blueDots = document.querySelectorAll(".blue-dots")
 const backCard = document.querySelector(".cardBack")
 let text = document.querySelectorAll(".stage-text")
 let cards = document.querySelector(".cards")
-let exitCard = []
 
 
 
@@ -984,10 +983,6 @@ function randomLowCard()  {
     cards.style.visibility = "visible"
     easyCards.sort(() => Math.random() - 1);
     let randomCard = easyCards[Math.floor(Math.random() * easyCards.length)];
-    let myIndex = easyCards.indexOf(randomCard)
-    if (myIndex !== -1) {
-        easyCards.splice(myIndex, 1)
-    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
@@ -997,6 +992,10 @@ function randomLowCard()  {
                     ancientAzathoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientAzathoth.firstState.blue
                     maxFirstAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1008,6 +1007,10 @@ function randomLowCard()  {
                     ancientAzathoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientAzathoth.firstState.green
                     maxFirstAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1018,6 +1021,10 @@ function randomLowCard()  {
                     ancientAzathoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientAzathoth.firstState.brown
                     maxFirstAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1033,6 +1040,10 @@ function randomLowCard()  {
                     ancientAzathoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientAzathoth.secondState.blue
                     maxSecondAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1044,6 +1055,10 @@ function randomLowCard()  {
                     ancientAzathoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientAzathoth.secondState.green
                     maxSecondAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1054,6 +1069,10 @@ function randomLowCard()  {
                     ancientAzathoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientAzathoth.secondState.brown
                     maxSecondAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1069,6 +1088,10 @@ function randomLowCard()  {
                     ancientAzathoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
                     maxThirdAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1080,6 +1103,10 @@ function randomLowCard()  {
                     ancientAzathoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientAzathoth.thirdState.green
                     maxThirdAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1090,6 +1117,10 @@ function randomLowCard()  {
                     ancientAzathoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
                     maxThirdAzathoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1117,6 +1148,10 @@ function randomLowCard()  {
                     ancientCthulthu.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientCthulthu.firstState.blue
                     maxFirstCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1128,6 +1163,10 @@ function randomLowCard()  {
                     ancientCthulthu.firstState.green -= 1
                     greenDots[0].innerHTML = ancientCthulthu.firstState.green
                     maxFirstCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1138,6 +1177,10 @@ function randomLowCard()  {
                     ancientCthulthu.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientCthulthu.firstState.brown
                     maxFirstCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1153,6 +1196,10 @@ function randomLowCard()  {
                     ancientCthulthu.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientCthulthu.secondState.blue
                     maxSecondCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1164,6 +1211,10 @@ function randomLowCard()  {
                     ancientCthulthu.secondState.green -= 1
                     greenDots[1].innerHTML = ancientCthulthu.secondState.green
                     maxSecondCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1174,6 +1225,10 @@ function randomLowCard()  {
                     ancientCthulthu.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientCthulthu.secondState.brown
                     maxSecondCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1189,6 +1244,10 @@ function randomLowCard()  {
                     ancientCthulthu.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
                     maxThirdCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1200,6 +1259,10 @@ function randomLowCard()  {
                     ancientCthulthu.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientCthulthu.thirdState.green
                     maxThirdCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1210,6 +1273,10 @@ function randomLowCard()  {
                     ancientCthulthu.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
                     maxThirdCthulthu -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1237,6 +1304,10 @@ function randomLowCard()  {
                     ancientIogSothoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientIogSothoth.firstState.blue
                     maxFirstIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1248,6 +1319,10 @@ function randomLowCard()  {
                     ancientIogSothoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientIogSothoth.firstState.green
                     maxFirstIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1258,6 +1333,10 @@ function randomLowCard()  {
                     ancientIogSothoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientIogSothoth.firstState.brown
                     maxFirstIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1273,6 +1352,10 @@ function randomLowCard()  {
                     ancientIogSothoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientIogSothoth.secondState.blue
                     maxSecondIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1284,6 +1367,10 @@ function randomLowCard()  {
                     ancientIogSothoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientIogSothoth.secondState.green
                     maxSecondIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1294,6 +1381,10 @@ function randomLowCard()  {
                     ancientIogSothoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientIogSothoth.secondState.brown
                     maxSecondIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1309,8 +1400,12 @@ function randomLowCard()  {
                     ancientIogSothoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientIogSothoth.thirdState.blue
                     maxThirdIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
-                    randomMediumCard()
+                    randomLowCard()
                 }
 
             } else if (randomCard.color === 'green') {
@@ -1320,8 +1415,12 @@ function randomLowCard()  {
                     ancientIogSothoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientIogSothoth.thirdState.green
                     maxThirdIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
-                    randomMediumCard()
+                    randomLowCard()
                 }
             } else if (randomCard.color === 'brown') {
                 if (ancientIogSothoth.thirdState.brown > 0) {
@@ -1330,8 +1429,12 @@ function randomLowCard()  {
                     ancientIogSothoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientIogSothoth.thirdState.brown
                     maxThirdIogSothoth -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
-                    randomMediumCard()
+                    randomLowCard()
                 }
             }
         }
@@ -1357,6 +1460,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientShubNiggurath.firstState.blue
                     maxFirstShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1368,6 +1475,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.firstState.green -= 1
                     greenDots[0].innerHTML = ancientShubNiggurath.firstState.green
                     maxFirstShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1378,6 +1489,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientShubNiggurath.firstState.brown
                     maxFirstShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1393,6 +1508,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientShubNiggurath.secondState.blue
                     maxSecondShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1404,6 +1523,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.secondState.green -= 1
                     greenDots[1].innerHTML = ancientShubNiggurath.secondState.green
                     maxSecondShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1414,6 +1537,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientShubNiggurath.secondState.brown
                     maxSecondShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1429,6 +1556,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
                     maxThirdShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1440,6 +1571,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientShubNiggurath.thirdState.green
                     maxThirdShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1450,6 +1585,10 @@ function randomLowCard()  {
                     ancientShubNiggurath.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientShubNiggurath.thirdState.brown
                     maxThirdShubNiggurath -= 1
+                    let myIndex = easyCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        easyCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomLowCard()
                 }
@@ -1476,10 +1615,6 @@ function randomMediumCard() {
     cards.style.visibility = "visible"
     fullCards.sort(() => Math.random() - 1);
     let randomCard = fullCards[Math.floor(Math.random() * fullCards.length)];
-    let myIndex = fullCards.indexOf(randomCard)
-    if (myIndex !== -1) {
-        fullCards.splice(myIndex, 1)
-    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
@@ -1489,6 +1624,10 @@ function randomMediumCard() {
                     ancientAzathoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientAzathoth.firstState.blue
                     maxFirstAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1500,6 +1639,10 @@ function randomMediumCard() {
                     ancientAzathoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientAzathoth.firstState.green
                     maxFirstAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1510,6 +1653,10 @@ function randomMediumCard() {
                     ancientAzathoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientAzathoth.firstState.brown
                     maxFirstAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1525,6 +1672,10 @@ function randomMediumCard() {
                     ancientAzathoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientAzathoth.secondState.blue
                     maxSecondAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1536,6 +1687,10 @@ function randomMediumCard() {
                     ancientAzathoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientAzathoth.secondState.green
                     maxSecondAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1546,6 +1701,10 @@ function randomMediumCard() {
                     ancientAzathoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientAzathoth.secondState.brown
                     maxSecondAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1553,7 +1712,6 @@ function randomMediumCard() {
         }
 
         else if(maxThirdAzathoth > 0){
-
             if (randomCard.color === 'blue') {
                 if (ancientAzathoth.thirdState.blue > 0) {
                     openCard.src = randomCard.src
@@ -1561,6 +1719,10 @@ function randomMediumCard() {
                     ancientAzathoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
                     maxThirdAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1572,6 +1734,10 @@ function randomMediumCard() {
                     ancientAzathoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientAzathoth.thirdState.green
                     maxThirdAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1582,6 +1748,10 @@ function randomMediumCard() {
                     ancientAzathoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
                     maxThirdAzathoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1609,6 +1779,10 @@ function randomMediumCard() {
                     ancientCthulthu.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientCthulthu.firstState.blue
                     maxFirstCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1620,6 +1794,10 @@ function randomMediumCard() {
                     ancientCthulthu.firstState.green -= 1
                     greenDots[0].innerHTML = ancientCthulthu.firstState.green
                     maxFirstCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1630,6 +1808,10 @@ function randomMediumCard() {
                     ancientCthulthu.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientCthulthu.firstState.brown
                     maxFirstCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1645,6 +1827,10 @@ function randomMediumCard() {
                     ancientCthulthu.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientCthulthu.secondState.blue
                     maxSecondCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1656,6 +1842,10 @@ function randomMediumCard() {
                     ancientCthulthu.secondState.green -= 1
                     greenDots[1].innerHTML = ancientCthulthu.secondState.green
                     maxSecondCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1666,6 +1856,10 @@ function randomMediumCard() {
                     ancientCthulthu.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientCthulthu.secondState.brown
                     maxSecondCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1681,6 +1875,10 @@ function randomMediumCard() {
                     ancientCthulthu.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
                     maxThirdCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1692,6 +1890,10 @@ function randomMediumCard() {
                     ancientCthulthu.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientCthulthu.thirdState.green
                     maxThirdCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1702,6 +1904,10 @@ function randomMediumCard() {
                     ancientCthulthu.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
                     maxThirdCthulthu -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1729,6 +1935,10 @@ function randomMediumCard() {
                     ancientIogSothoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientIogSothoth.firstState.blue
                     maxFirstIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1740,6 +1950,10 @@ function randomMediumCard() {
                     ancientIogSothoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientIogSothoth.firstState.green
                     maxFirstIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1750,6 +1964,10 @@ function randomMediumCard() {
                     ancientIogSothoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientIogSothoth.firstState.brown
                     maxFirstIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1765,6 +1983,10 @@ function randomMediumCard() {
                     ancientIogSothoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientIogSothoth.secondState.blue
                     maxSecondIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1776,6 +1998,10 @@ function randomMediumCard() {
                     ancientIogSothoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientIogSothoth.secondState.green
                     maxSecondIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1786,6 +2012,10 @@ function randomMediumCard() {
                     ancientIogSothoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientIogSothoth.secondState.brown
                     maxSecondIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1801,6 +2031,10 @@ function randomMediumCard() {
                     ancientIogSothoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientIogSothoth.thirdState.blue
                     maxThirdIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1812,6 +2046,10 @@ function randomMediumCard() {
                     ancientIogSothoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientIogSothoth.thirdState.green
                     maxThirdIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1822,6 +2060,10 @@ function randomMediumCard() {
                     ancientIogSothoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientIogSothoth.thirdState.brown
                     maxThirdIogSothoth -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1849,6 +2091,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientShubNiggurath.firstState.blue
                     maxFirstShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1860,6 +2106,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.firstState.green -= 1
                     greenDots[0].innerHTML = ancientShubNiggurath.firstState.green
                     maxFirstShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1870,6 +2120,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientShubNiggurath.firstState.brown
                     maxFirstShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1885,6 +2139,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientShubNiggurath.secondState.blue
                     maxSecondShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1896,6 +2154,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.secondState.green -= 1
                     greenDots[1].innerHTML = ancientShubNiggurath.secondState.green
                     maxSecondShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1906,6 +2168,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientShubNiggurath.secondState.brown
                     maxSecondShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1921,6 +2187,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
                     maxThirdShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1932,6 +2202,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientShubNiggurath.thirdState.green
                     maxThirdShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1942,6 +2216,10 @@ function randomMediumCard() {
                     ancientShubNiggurath.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientShubNiggurath.thirdState.brown
                     maxThirdShubNiggurath -= 1
+                    let myIndex = fullCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        fullCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomMediumCard()
                 }
@@ -1968,10 +2246,6 @@ function randomHardCard()  {
     cards.style.visibility = "visible"
     hardCards.sort(() => Math.random() - 1);
     let randomCard = hardCards[Math.floor(Math.random() * hardCards.length)];
-    let myIndex = hardCards.indexOf(randomCard)
-    if (myIndex !== -1) {
-        hardCards.splice(myIndex, 1)
-    }
     if(properties.ancient === 0){
         if(maxFirstAzathoth > 0) {
             if (randomCard.color === 'blue') {
@@ -1981,6 +2255,10 @@ function randomHardCard()  {
                     ancientAzathoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientAzathoth.firstState.blue
                     maxFirstAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -1992,6 +2270,10 @@ function randomHardCard()  {
                     ancientAzathoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientAzathoth.firstState.green
                     maxFirstAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2002,6 +2284,10 @@ function randomHardCard()  {
                     ancientAzathoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientAzathoth.firstState.brown
                     maxFirstAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2017,6 +2303,10 @@ function randomHardCard()  {
                     ancientAzathoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientAzathoth.secondState.blue
                     maxSecondAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2028,6 +2318,10 @@ function randomHardCard()  {
                     ancientAzathoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientAzathoth.secondState.green
                     maxSecondAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2038,6 +2332,10 @@ function randomHardCard()  {
                     ancientAzathoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientAzathoth.secondState.brown
                     maxSecondAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2053,6 +2351,10 @@ function randomHardCard()  {
                     ancientAzathoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
                     maxThirdAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2064,6 +2366,10 @@ function randomHardCard()  {
                     ancientAzathoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientAzathoth.thirdState.green
                     maxThirdAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2074,6 +2380,10 @@ function randomHardCard()  {
                     ancientAzathoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
                     maxThirdAzathoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2101,6 +2411,10 @@ function randomHardCard()  {
                     ancientCthulthu.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientCthulthu.firstState.blue
                     maxFirstCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2112,6 +2426,10 @@ function randomHardCard()  {
                     ancientCthulthu.firstState.green -= 1
                     greenDots[0].innerHTML = ancientCthulthu.firstState.green
                     maxFirstCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2122,6 +2440,10 @@ function randomHardCard()  {
                     ancientCthulthu.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientCthulthu.firstState.brown
                     maxFirstCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2137,6 +2459,10 @@ function randomHardCard()  {
                     ancientCthulthu.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientCthulthu.secondState.blue
                     maxSecondCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2148,6 +2474,10 @@ function randomHardCard()  {
                     ancientCthulthu.secondState.green -= 1
                     greenDots[1].innerHTML = ancientCthulthu.secondState.green
                     maxSecondCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2158,6 +2488,10 @@ function randomHardCard()  {
                     ancientCthulthu.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientCthulthu.secondState.brown
                     maxSecondCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2173,6 +2507,10 @@ function randomHardCard()  {
                     ancientCthulthu.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
                     maxThirdCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2184,6 +2522,10 @@ function randomHardCard()  {
                     ancientCthulthu.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientCthulthu.thirdState.green
                     maxThirdCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2194,6 +2536,10 @@ function randomHardCard()  {
                     ancientCthulthu.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
                     maxThirdCthulthu -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2221,6 +2567,10 @@ function randomHardCard()  {
                     ancientIogSothoth.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientIogSothoth.firstState.blue
                     maxFirstIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2232,6 +2582,10 @@ function randomHardCard()  {
                     ancientIogSothoth.firstState.green -= 1
                     greenDots[0].innerHTML = ancientIogSothoth.firstState.green
                     maxFirstIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2242,6 +2596,10 @@ function randomHardCard()  {
                     ancientIogSothoth.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientIogSothoth.firstState.brown
                     maxFirstIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2257,6 +2615,10 @@ function randomHardCard()  {
                     ancientIogSothoth.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientIogSothoth.secondState.blue
                     maxSecondIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2268,6 +2630,10 @@ function randomHardCard()  {
                     ancientIogSothoth.secondState.green -= 1
                     greenDots[1].innerHTML = ancientIogSothoth.secondState.green
                     maxSecondIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2278,6 +2644,10 @@ function randomHardCard()  {
                     ancientIogSothoth.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientIogSothoth.secondState.brown
                     maxSecondIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2293,6 +2663,10 @@ function randomHardCard()  {
                     ancientIogSothoth.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientIogSothoth.thirdState.blue
                     maxThirdIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2304,6 +2678,10 @@ function randomHardCard()  {
                     ancientIogSothoth.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientIogSothoth.thirdState.green
                     maxThirdIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2314,6 +2692,10 @@ function randomHardCard()  {
                     ancientIogSothoth.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientIogSothoth.thirdState.brown
                     maxThirdIogSothoth -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2341,6 +2723,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.firstState.blue -= 1
                     blueDots[0].innerHTML = ancientShubNiggurath.firstState.blue
                     maxFirstShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2352,6 +2738,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.firstState.green -= 1
                     greenDots[0].innerHTML = ancientShubNiggurath.firstState.green
                     maxFirstShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2362,6 +2752,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.firstState.brown -= 1
                     brownDots[0].innerHTML = ancientShubNiggurath.firstState.brown
                     maxFirstShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2377,6 +2771,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.secondState.blue -= 1
                     blueDots[1].innerHTML = ancientShubNiggurath.secondState.blue
                     maxSecondShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2388,6 +2786,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.secondState.green -= 1
                     greenDots[1].innerHTML = ancientShubNiggurath.secondState.green
                     maxSecondShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2398,6 +2800,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.secondState.brown -= 1
                     brownDots[1].innerHTML = ancientShubNiggurath.secondState.brown
                     maxSecondShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2413,6 +2819,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.thirdState.blue -= 1
                     blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
                     maxThirdShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2424,6 +2834,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.thirdState.green -= 1
                     greenDots[2].innerHTML = ancientShubNiggurath.thirdState.green
                     maxThirdShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
@@ -2434,6 +2848,10 @@ function randomHardCard()  {
                     ancientShubNiggurath.thirdState.brown -= 1
                     brownDots[2].innerHTML = ancientShubNiggurath.thirdState.brown
                     maxThirdShubNiggurath -= 1
+                    let myIndex = hardCards.indexOf(randomCard)
+                    if (myIndex !== -1) {
+                        hardCards.splice(myIndex, 1)
+                    }
                 }else{
                     randomHardCard()
                 }
