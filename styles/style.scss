@@ -15,9 +15,11 @@ body {
       }
       img:hover {
         border:5px solid #000000;
+        cursor: pointer;
       }
       img:active {
         border:5px solid #c40000;
+        cursor: pointer;
       }
     }
   }
@@ -52,6 +54,7 @@ body {
       li:hover{
         color: #000000;
         border: 1px solid #9f9f9f;
+        cursor: pointer;
       }
     }
   }
@@ -75,6 +78,7 @@ body {
   .shuffle:hover{
       color: #000000;
       border: 1px solid #9f9f9f;
+    cursor: pointer;
   }
   .container-game{
     display: flex;
@@ -105,6 +109,7 @@ body {
       .reload:hover{
         border: 2px solid #cdeaff;
         color: #cdeaff;
+        cursor: pointer;
       }
     }
     .current-state{
@@ -162,6 +167,7 @@ body {
     .cardBack{
       img{
         width: 200px;
+        cursor: pointer;
       }
     }
   }
