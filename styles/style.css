@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+body {
+  background-image: url(../assets/home.png);
+  margin: 0;
+  padding: 0;
+}
+body .container .nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto 0;
+}
+body .container .nav img {
+  width: 300px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  transition: 0.1s;
+}
+body .container .nav img:hover {
+  border: 5px solid #000000;
+  cursor: pointer;
+}
+body .container .nav img:active {
+  border: 5px solid #c40000;
+  cursor: pointer;
+}
+body .level {
+  visibility: hidden;
+  opacity: 0;
+  margin: 30px auto;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+body .level span {
+  font-family: "Aboreto", cursive;
+  font-weight: bold;
+  font-size: 32px;
+  color: #c40000;
+}
+body .level ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+body .level ul li {
+  font-family: "Aboreto", cursive;
+  list-style-type: none;
+  color: #282828;
+  font-size: 24px;
+  font-weight: bold;
+  width: 300px;
+  background-color: #c40000;
+  margin: 0 auto 15px;
+  border-radius: 30px;
+  transition: 0.25s;
+  border: 1px solid #c40000;
+}
+body .level ul li:hover {
+  color: #000000;
+  border: 1px solid #9f9f9f;
+  cursor: pointer;
+}
+body .shuffle {
+  font-family: "Aboreto", cursive;
+  visibility: hidden;
+  opacity: 0;
+  color: #282828;
+  font-size: 32px;
+  font-weight: bold;
+  width: 400px;
+  height: 45px;
+  background-color: #c40000;
+  margin: -100px auto 0;
+  border-radius: 30px;
+  transition: 0.25s;
+  border: 1px solid #c40000;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+body .shuffle:hover {
+  color: #000000;
+  border: 1px solid #9f9f9f;
+  cursor: pointer;
+}
+body .container-game {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: -200px;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+body .container-game .rel {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+body .container-game .rel .reload {
+  font-family: "Aboreto", cursive;
+  font-size: 16px;
+  font-weight: bold;
+  background: rgb(99, 0, 0);
+  background: linear-gradient(90deg, rgb(99, 0, 0) 0%, rgb(156, 1, 1) 50%, rgb(85, 0, 0) 100%);
+  border: 2px solid #c40000;
+  border-radius: 30px;
+  width: 200px;
+  height: 40px;
+  color: rgb(197, 197, 197);
+  transition-duration: 0.2s;
+}
+body .container-game .rel .reload:hover {
+  border: 2px solid #cdeaff;
+  color: #cdeaff;
+  cursor: pointer;
+}
+body .container-game .current-state .stage-container {
+  width: 250px;
+  text-align: center;
+}
+body .container-game .current-state .stage-container .stage-text {
+  font-family: "Aboreto", cursive;
+  color: #ad0101;
+  font-size: 22px;
+}
+body .container-game .current-state .stage-container .dots-container {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body .container-game .current-state .stage-container .dots-container .green-dots {
+  width: 50px;
+  height: 50px;
+  background-color: #007700;
+  border-radius: 50px;
+  font-family: "Aboreto", cursive;
+  font-size: 42px;
+  color: #cdeaff;
+}
+body .container-game .current-state .stage-container .dots-container .brown-dots {
+  width: 50px;
+  height: 50px;
+  background-color: #702222;
+  border-radius: 50px;
+  font-family: "Aboreto", cursive;
+  font-size: 42px;
+  color: #cdeaff;
+}
+body .container-game .current-state .stage-container .dots-container .blue-dots {
+  width: 50px;
+  height: 50px;
+  background-color: #0101b6;
+  border-radius: 50px;
+  font-family: "Aboreto", cursive;
+  font-size: 42px;
+  color: #cdeaff;
+}
+body .container-game .cards {
+  width: 200px;
+}
+body .container-game .cards img {
+  width: 200px;
+}
+body .container-game .cardBack img {
+  width: 200px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  body header .container .nav img {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  body header .container .nav img {
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
