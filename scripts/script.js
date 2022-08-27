@@ -559,6 +559,8 @@ backCard.addEventListener("click", ()=>{
         randomMediumCard()
     }else if (properties.level === 3) {
         randomHardCard()
+    } else if (properties.level === 4) {
+        randomHarderCards()
     }
 
 })
@@ -1038,7 +1040,7 @@ function randomLowerCards() {
                     }
                 } else if (randomNormalCard.color === 'brown') {
                     if (ancientCthulthu.secondState.brown > 0) {
-                        openCard.src = randomNormalrCard.src
+                        openCard.src = randomNormalCard.src
                         parent.appendChild(openCard)
                         ancientCthulthu.secondState.brown -= 1
                         brownDots[1].innerHTML = ancientCthulthu.secondState.brown
@@ -1462,7 +1464,6 @@ function randomLowerCards() {
 
 
     else if(properties.ancient === 3){
-        console.log(lowerCards.length)
         if(maxFirstShubNiggurath > 0) {
             if (lowerCards.length > 0) {
                 if (randomLowerCard.color === 'blue') {
@@ -1519,7 +1520,7 @@ function randomLowerCards() {
                         maxFirstShubNiggurath -= 1
                         let myIndex = normalCards.indexOf(randomNormalCard)
                         if (myIndex !== -1) {
-                            normalards.splice(myIndex, 1)
+                            normalCards.splice(myIndex, 1)
                         }
                     } else {
                         randomLowerCards()
@@ -3687,7 +3688,1205 @@ function randomHardCard()  {
 
 }
 
+function randomHarderCards() {
+    cards.style.visibility = "visible"
+    let randomLowerCard = harderCards[Math.floor(Math.random() * harderCards.length)];
 
+    let randomNormalCard = normalCards[Math.floor(Math.random() * normalCards.length)];
+    if(properties.ancient === 0){
+        if(maxFirstAzathoth > 0) {
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientAzathoth.firstState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientAzathoth.firstState.blue
+                        maxFirstAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientAzathoth.firstState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientAzathoth.firstState.green
+                        maxFirstAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientAzathoth.firstState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientAzathoth.firstState.brown
+                        maxFirstAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientAzathoth.firstState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientAzathoth.firstState.blue
+                        maxFirstAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientAzathoth.firstState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientAzathoth.firstState.green
+                        maxFirstAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientAzathoth.firstState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientAzathoth.firstState.brown
+                        maxFirstAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxSecondAzathoth > 0){
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientAzathoth.secondState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientAzathoth.secondState.blue
+                        maxSecondAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientAzathoth.secondState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientAzathoth.secondState.green
+                        maxSecondAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientAzathoth.secondState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientAzathoth.secondState.brown
+                        maxSecondAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else{
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientAzathoth.secondState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientAzathoth.secondState.blue
+                        maxSecondAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientAzathoth.secondState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientAzathoth.secondState.green
+                        maxSecondAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientAzathoth.secondState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientAzathoth.secondState.brown
+                        maxSecondAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxThirdAzathoth > 0){
+            if (harderCards.length > 2){
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientAzathoth.thirdState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
+                        maxThirdAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientAzathoth.thirdState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientAzathoth.thirdState.green
+                        maxThirdAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientAzathoth.thirdState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
+                        maxSecondAzathoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else{
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientAzathoth.thirdState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientAzathoth.thirdState.blue
+                        maxThirdAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientAzathoth.thirdState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientAzathoth.thirdState.green
+                        maxThirdAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientAzathoth.thirdState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientAzathoth.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientAzathoth.thirdState.brown
+                        maxThirdAzathoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        if(maxFirstAzathoth === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondAzathoth === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdAzathoth === 0) {
+            text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
+        }
+    }
+
+
+    else if(properties.ancient === 1){
+        if(maxFirstCthulthu > 0) {
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientCthulthu.firstState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientCthulthu.firstState.blue
+                        maxFirstCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientCthulthu.firstState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientCthulthu.firstState.green
+                        maxFirstCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientCthulthu.firstState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientCthulthu.firstState.brown
+                        maxFirstCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientCthulthu.firstState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientCthulthu.firstState.blue
+                        maxFirstCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientCthulthu.firstState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientCthulthu.firstState.green
+                        maxFirstCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientCthulthu.firstState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientCthulthu.firstState.brown
+                        maxFirstCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxSecondCthulthu > 0){
+
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientCthulthu.secondState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientCthulthu.secondState.blue
+                        maxSecondCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientCthulthu.secondState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientCthulthu.secondState.green
+                        maxSecondCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientCthulthu.secondState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientCthulthu.secondState.brown
+                        maxSecondCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientCthulthu.secondState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientCthulthu.secondState.blue
+                        maxSecondCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientCthulthu.secondState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientCthulthu.secondState.green
+                        maxSecondCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientCthulthu.secondState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientCthulthu.secondState.brown
+                        maxSecondCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxThirdCthulthu > 0){
+            if (harderCards.length > 3) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientCthulthu.thirdState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
+                        maxThirdCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientCthulthu.thirdState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientCthulthu.thirdState.green
+                        maxThirdCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientCthulthu.thirdState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
+                        maxThirdCthulthu -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientCthulthu.thirdState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientCthulthu.thirdState.blue
+                        maxThirdCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientCthulthu.thirdState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientCthulthu.thirdState.green
+                        maxThirdCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientCthulthu.thirdState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientCthulthu.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientCthulthu.thirdState.brown
+                        maxThirdCthulthu -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        if(maxFirstCthulthu === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondCthulthu === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdCthulthu === 0) {
+            text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
+        }
+    }
+
+
+    else if(properties.ancient === 2){
+        if(maxFirstIogSothoth > 0) {
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientIogSothoth.firstState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientIogSothoth.firstState.blue
+                        maxFirstIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientIogSothoth.firstState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientIogSothoth.firstState.green
+                        maxFirstIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientIogSothoth.firstState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientIogSothoth.firstState.brown
+                        maxFirstIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientIogSothoth.firstState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientIogSothoth.firstState.blue
+                        maxFirstIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientIogSothoth.firstState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientIogSothoth.firstState.green
+                        maxFirstIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientIogSothoth.firstState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientIogSothoth.firstState.brown
+                        maxFirstIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    }else{
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxSecondIogSothoth > 0){
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientIogSothoth.secondState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientIogSothoth.secondState.blue
+                        maxSecondIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientIogSothoth.secondState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientIogSothoth.secondState.green
+                        maxSecondIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientIogSothoth.secondState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientIogSothoth.secondState.brown
+                        maxSecondIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientIogSothoth.secondState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientIogSothoth.secondState.blue
+                        maxSecondIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientIogSothoth.secondState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientIogSothoth.secondState.green
+                        maxSecondIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientIogSothoth.secondState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientIogSothoth.secondState.brown
+                        maxSecondIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxThirdIogSothoth > 0){
+            if(harderCards.length > 2) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientIogSothoth.thirdState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientIogSothoth.thirdState.blue
+                        maxThirdIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientIogSothoth.thirdState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientIogSothoth.thirdState.green
+                        maxThirdIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientIogSothoth.thirdState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientIogSothoth.thirdState.brown
+                        maxThirdIogSothoth -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientIogSothoth.thirdState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientIogSothoth.thirdState.blue
+                        maxThirdIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientIogSothoth.thirdState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientIogSothoth.thirdState.green
+                        maxThirdIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientIogSothoth.thirdState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientIogSothoth.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientIogSothoth.thirdState.brown
+                        maxThirdIogSothoth -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        if(maxFirstIogSothoth === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondIogSothoth === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdIogSothoth === 0) {
+            text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
+        }
+    }
+
+
+    else if(properties.ancient === 3){
+        console.log(harderCards.length)
+        if(maxFirstShubNiggurath > 0) {
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientShubNiggurath.firstState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientShubNiggurath.firstState.blue
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientShubNiggurath.firstState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientShubNiggurath.firstState.green
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientShubNiggurath.firstState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientShubNiggurath.firstState.brown
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientShubNiggurath.firstState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.blue -= 1
+                        blueDots[0].innerHTML = ancientShubNiggurath.firstState.blue
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientShubNiggurath.firstState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.green -= 1
+                        greenDots[0].innerHTML = ancientShubNiggurath.firstState.green
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientShubNiggurath.firstState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.firstState.brown -= 1
+                        brownDots[0].innerHTML = ancientShubNiggurath.firstState.brown
+                        maxFirstShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxSecondShubNiggurath > 0){
+            if (harderCards.length > 0) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientShubNiggurath.secondState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientShubNiggurath.secondState.blue
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientShubNiggurath.secondState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientShubNiggurath.secondState.green
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientShubNiggurath.secondState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientShubNiggurath.secondState.brown
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientShubNiggurath.secondState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.blue -= 1
+                        blueDots[1].innerHTML = ancientShubNiggurath.secondState.blue
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientShubNiggurath.secondState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.green -= 1
+                        greenDots[1].innerHTML = ancientShubNiggurath.secondState.green
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientShubNiggurath.secondState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.secondState.brown -= 1
+                        brownDots[1].innerHTML = ancientShubNiggurath.secondState.brown
+                        maxSecondShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        else if(maxThirdShubNiggurath > 0){
+            if (harderCards.length > 2) {
+                if (randomLowerCard.color === 'blue') {
+                    if (ancientShubNiggurath.thirdState.blue > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomLowerCard.color === 'green') {
+                    if (ancientShubNiggurath.thirdState.green > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientShubNiggurath.thirdState.green
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomLowerCard.color === 'brown') {
+                    if (ancientShubNiggurath.thirdState.brown > 0) {
+                        openCard.src = randomLowerCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientShubNiggurath.thirdState.brown
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = harderCards.indexOf(randomLowerCard)
+                        if (myIndex !== -1) {
+                            harderCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            } else {
+                if (randomNormalCard.color === 'blue') {
+                    if (ancientShubNiggurath.thirdState.blue > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.blue -= 1
+                        blueDots[2].innerHTML = ancientShubNiggurath.thirdState.blue
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+
+                } else if (randomNormalCard.color === 'green') {
+                    if (ancientShubNiggurath.thirdState.green > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.green -= 1
+                        greenDots[2].innerHTML = ancientShubNiggurath.thirdState.green
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                } else if (randomNormalCard.color === 'brown') {
+                    if (ancientShubNiggurath.thirdState.brown > 0) {
+                        openCard.src = randomNormalCard.src
+                        parent.appendChild(openCard)
+                        ancientShubNiggurath.thirdState.brown -= 1
+                        brownDots[2].innerHTML = ancientShubNiggurath.thirdState.brown
+                        maxThirdShubNiggurath -= 1
+                        let myIndex = normalCards.indexOf(randomNormalCard)
+                        if (myIndex !== -1) {
+                            normalCards.splice(myIndex, 1)
+                        }
+                    } else {
+                        randomHarderCards()
+                    }
+                }
+            }
+        }
+
+        if(maxFirstShubNiggurath === 0) {
+            text[0].style.color ="black"
+        }
+        if(maxSecondShubNiggurath === 0) {
+            text[1].style.color ="black"
+        }
+        if(maxThirdShubNiggurath === 0) {
+            text[2].style.color ="black"
+            reload.style.display = "block"
+            reload.style.visibility = "visible"
+            reload.style.opacity = "100%"
+        }
+    }
+
+}
 //////////////////////////////////////////////////////
 
 //Reload//////////////////////////////////////////////
