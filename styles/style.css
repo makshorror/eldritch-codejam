@@ -166,4 +166,15 @@ body .container-game .cardBack img {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  body header .container .nav img {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  body header .container .nav img {
+    width: 150px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
